@@ -1,0 +1,87 @@
+package StudentMnsys;
+
+
+import java.util.Scanner;
+
+public class Student {
+	long Enr_no;
+	String name;
+	String email;
+	String contact_no;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Student(long Enr_no, String name, String email, String contact_no) {
+		super();
+		this.Enr_no = Enr_no;
+		this.name = name;
+		this.email = email;
+		this.contact_no = contact_no;
+	}
+	
+		public Student(long enr_no) {
+		super();
+		Enr_no = enr_no;
+	}
+		public Student(String name, String email, String contact_no) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.contact_no = contact_no;
+	}
+		public long getEnr_no() {
+		return Enr_no;
+	}
+	public void setEnr_no(long enr_no) {
+		
+		this.Enr_no = enr_no;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getContact_no() {
+		return contact_no;
+	}
+	public void setContact_no(String contact_no) {
+		this.contact_no = contact_no;
+	}
+	
+	@Override
+	public String toString() {
+		
+	
+		return "Student Details:\n  enrollment_no =  " + Enr_no +"\n " + " student name=    " + name+"\n"  + " Studen email_id = " + email+ "\n" + " Student contact_no=  " + contact_no;
+	
+	}
+	
+		
+
+	
+
+public  Student insert() {
+	 
+	  Scanner scanner = new Scanner(System.in);
+	System.out.println("enter the student name");
+	  name = scanner.nextLine();
+	System.out.println("enter the student email_id");
+    email = scanner.nextLine();
+	System.out.println("enter the student contact_no");
+	 contact_no = scanner.nextLine();
+	
+
+
+
+	return new Student(name,email,contact_no);
+
+	
+}}

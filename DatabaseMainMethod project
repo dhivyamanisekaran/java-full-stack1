@@ -1,0 +1,22 @@
+package StudentMnsys;
+
+
+
+public class DatabaseMainMethod {
+
+	public static void main(String[] args) {
+		
+		
+		Student t= new Student();
+		Course t1 = new Course();
+		FeePayment t2 =new FeePayment();
+		
+		t.setEnr_no((int)(Math.random()*100000));
+		t.insert();
+		t1.enroll();
+		t2.insert();
+		System.out.println(t);
+		System.out.println(t1);
+		System.out.println(t2);
+}
+}
